@@ -8,7 +8,6 @@ public class InetAddressTest
     {
         InetAddress Address = InetAddress.getLocalHost();
         System.out.println("Localhost IP address: " + Address);
-        Address = InetAddress.getByName("www.google.com");
 
     }    
 }
