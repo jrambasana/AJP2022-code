@@ -1,0 +1,22 @@
+import java.io.*;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class Client
+{
+	public static void main(String[] args) throws Exception 
+	{
+		Socket s1=new Socket("127.0.0.1",7888);
+		if(s1.isConnected())
+		{
+			System.out.println("Connected to server");
+		}
+		DataInputStream msg=new DataInputStream(System.in);
+		String str="Say something2";
+		DataOutputStream dout=new DataOutputStream(s1.getOutputStream());
+		dout.writeUTF(str);
+		System.out.println(str);
+		DataInputStream din=new DataInputStream(s1.getInputStream());
+
+	}
+}
