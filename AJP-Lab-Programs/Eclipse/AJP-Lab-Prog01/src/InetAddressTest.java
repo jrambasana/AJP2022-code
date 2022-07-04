@@ -1,7 +1,5 @@
 // Write an application which will retrieve IP address for given website.
 
-package ajp.prog01;
-
 import java.net.*;
 
 public class InetAddressTest
