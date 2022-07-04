@@ -1,3 +1,6 @@
+// Write a two – way network based chat application. 
+// It will use TCP/IP protocol and it will do communication in serial manner.
+
 import java.net.*;  
 import java.io.*;  
 public class MyServer
