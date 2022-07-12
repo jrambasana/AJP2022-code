@@ -25,7 +25,14 @@ public static void main(String args[])
              //echo the details of incomingPacket data - client ip : client port - client message
             System.out.println(incomingPacket.getAddress().getHostAddress() 
                     + " : " + incomingPacket.getPort() + " - " + s);                 
-            s = "OK : " + s;
+//          Code add OK to the original string and send it back to the Client
+//            s = "OK : " + s;
+            
+//          Code to reverse the Original String and send it back to the Client
+            StringBuffer sb = new StringBuffer(s);
+            sb.reverse();
+            s = new String(sb);
+            
             DatagramPacket dp = new DatagramPacket(s.getBytes() , s.getBytes().length , incomingPacket.getAddress() , incomingPacket.getPort());
             serverDGSocket.send(dp);      
         }           
