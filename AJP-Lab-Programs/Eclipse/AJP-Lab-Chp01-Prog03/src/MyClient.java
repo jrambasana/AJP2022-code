@@ -17,13 +17,13 @@ class MyClient
 		String str="",str2="";  
 		while(!str.equals("stop"))
 		{
-                    System.out.print("Enter your message here: ");  
-                    str=br.readLine();  
-                    dout.writeUTF(str);  
-                    dout.flush();  
-                    System.out.println("Waiting for Server's messsage...");  
-                    str2=din.readUTF();  
-                    System.out.println("Server says: "+str2);  
+            System.out.print("Enter your message here: ");  
+            str=br.readLine();  
+            dout.writeUTF(str);  
+            dout.flush();  
+            System.out.println("Waiting for Server's messsage...");  
+            str2=din.readUTF();  
+            System.out.println("Server says: "+str2);  
 		}   
 		dout.close();  
 		s.close();  

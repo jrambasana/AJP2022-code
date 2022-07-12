@@ -1,0 +1,32 @@
+package Fibonacci;
+
+import java.io.BufferedReader; 
+
+import java.io.DataInputStream; 
+import java.io.DataOutputStream; 
+import java.io.InputStream; 
+import java.io.InputStreamReader; 
+import java.net.Socket; 
+public class FiboClient { 
+public static void main(String args[]) 
+{ String server="localhost"; 
+int port=8133; 
+try{ 
+Socket s=new Socket(server,port); 
+System.out.println("Client is connected with server.!!"); 
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+DataInputStream dis = new DataInputStream(s.getInputStream()); 
+DataOutputStream dos = new DataOutputStream(s.getOutputStream()); 
+System.out.println("Enter number: "); 
+int n = Integer.parseInt(br.readLine()); 
+dos.writeInt(n); 
+int fibo = (int)dis.readInt(); 
+System.out.println("Fibonaci numaber is : "+fibo); 
+s.close(); 
+} 
+catch(Exception e){ 
+System.out.println("Exception e:"+e); 
+} 
+} 
+}
+

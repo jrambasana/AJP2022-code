@@ -23,7 +23,6 @@ try
     System.out.println("Path: "+url.getPath());    
     System.out.println("File: "+url.getFile()); 
     System.out.println("Ext:" + url.toExternalForm() );
-    
 }
 catch(Exception e)    {
         System.out.println(e);

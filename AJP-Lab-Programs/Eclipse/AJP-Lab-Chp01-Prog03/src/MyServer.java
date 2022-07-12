@@ -18,10 +18,10 @@ public class MyServer
 		String str="",str2="";  
 		while(!str.equals("stop"))
 		{  
-                        System.out.println("Waiting for Client's messsage...");  
+            System.out.println("Waiting for Client's messsage...");  
 			str=din.readUTF();  
 			System.out.println("Client says: "+str);  
-                        System.out.print("Enter your message here: ");  
+            System.out.print("Enter your message here: ");  
 			str2=br.readLine();  
 			dout.writeUTF(str2);  
 			dout.flush();  
