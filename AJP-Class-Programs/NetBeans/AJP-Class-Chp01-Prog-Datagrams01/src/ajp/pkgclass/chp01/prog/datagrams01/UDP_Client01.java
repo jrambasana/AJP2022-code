@@ -7,33 +7,32 @@ public class UDP_Client01
 {
 public static void main(String args[])
 {
-    DatagramSocket sock = null;
+    DatagramSocket clientDGSocket = null;
     int port = 7777;
     String s;         
     BufferedReader cin = new BufferedReader(new InputStreamReader(System.in));    
     try
     {
-        sock = new DatagramSocket();             
+        clientDGSocket = new DatagramSocket();             
         InetAddress host = InetAddress.getByName("localhost");
-        while(true)
-        {
+        while(true)        {
             //take input and send the packet
             System.out.println("Enter message to send : ");
             s = (String)cin.readLine();
             byte[] b = s.getBytes();
-
             DatagramPacket  dp = new DatagramPacket(b , b.length , host , port);
-            sock.send(dp);                 
+            clientDGSocket.send(dp);                 
             //now receive reply
             //buffer to receive incoming data
             byte[] buffer = new byte[65536];
             DatagramPacket reply = new DatagramPacket(buffer, buffer.length);
-            sock.receive(reply); 
+            clientDGSocket.receive(reply); 
             byte[] data = reply.getData();
             s = new String(data, 0, reply.getLength());
 
             //echo the details of incoming data - client ip : client port - client                       message
-            System.out.println(reply.getAddress().getHostAddress() + " : " + reply.getPort() + " - "        + s); 
+            System.out.println(reply.getAddress().getHostAddress() 
+                    + " : " + reply.getPort() + " - "        + s); 
         } 
     }
     catch(IOException e)
