@@ -17,24 +17,27 @@ public static void main(String args[])
         //2. Wait for an incomingPacket data
         System.out.println("Server socket created. Waiting for incoming data...");           
         //communication loop
+        System.out.println(" ======================= SERVER SIDE ======================= ");
         while(true)
         {
             serverDGSocket.receive(incomingPacket);
             byte[] data = incomingPacket.getData();
             String s = new String(data, 0, incomingPacket.getLength());        
              //echo the details of incomingPacket data - client ip : client port - client message
-            System.out.println(incomingPacket.getAddress().getHostAddress() 
+            System.out.println("Incoming: " + incomingPacket.getAddress().getHostAddress() 
                     + " : " + incomingPacket.getPort() + " - " + s);                 
 //          Code add OK to the original string and send it back to the Client
-//            s = "OK : " + s;
+            s = "OK : " + s;
+////          Code to reverse the Original String and send it back to the Client
+//            StringBuffer sb = new StringBuffer(s);
+//            sb.reverse();
+//            s = new String(sb);
             
-//          Code to reverse the Original String and send it back to the Client
-            StringBuffer sb = new StringBuffer(s);
-            sb.reverse();
-            s = new String(sb);
-            
-            DatagramPacket dp = new DatagramPacket(s.getBytes() , s.getBytes().length , incomingPacket.getAddress() , incomingPacket.getPort());
-            serverDGSocket.send(dp);      
+            DatagramPacket outgoingPacket = new DatagramPacket(s.getBytes() , s.getBytes().length , 
+                                    incomingPacket.getAddress() , incomingPacket.getPort());
+            serverDGSocket.send(outgoingPacket);      
+            System.out.println("Outgoing: " + outgoingPacket.getAddress().getHostAddress() 
+                    + " : " + outgoingPacket.getPort());                 
         }           
     }         
     catch(IOException e)
