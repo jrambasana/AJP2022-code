@@ -12,11 +12,12 @@ class StringClient
  public static void main(String args[]) throws Exception
  {    
   Socket s = new Socket("localhost", 3333);
-  int stop = 1;
   DataOutputStream dout = new
-DataOutputStream(s.getOutputStream());
-  BufferedReader  br = new BufferedReader(new InputStreamReader(s.getInputStream()));
-  BufferedReader kb = new BufferedReader(new InputStreamReader(System.in));
+            DataOutputStream(s.getOutputStream());
+  BufferedReader  br = 
+          new BufferedReader(new InputStreamReader(s.getInputStream()));
+  BufferedReader kb = 
+          new BufferedReader(new InputStreamReader(System.in));
   String str="",str1="";  
   do
   {
@@ -27,7 +28,7 @@ DataOutputStream(s.getOutputStream());
    System.out.println("\n");
    System.out.println("The String returned from Server is: ");
    System.out.println(str1);
-  }while(stop != 1);
+  }while(!str.equals("stop"));
   dout.close();
   br.close(); 
   kb.close();

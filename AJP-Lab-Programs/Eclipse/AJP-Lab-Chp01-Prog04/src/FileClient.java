@@ -8,8 +8,7 @@ class FileClient
 public static void main(String args[ ]) throws Exception
 {
 	Socket s = new Socket("localhost", 8888);
-	BufferedReader kb = new BufferedReader(new
-	InputStreamReader(System.in));
+	BufferedReader kb = new BufferedReader(new InputStreamReader(System.in));
 	System.out.print("Enter filename: ");
 	String fname = kb.readLine();
 	

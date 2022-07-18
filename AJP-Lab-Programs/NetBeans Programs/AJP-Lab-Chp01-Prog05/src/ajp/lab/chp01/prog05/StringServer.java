@@ -15,29 +15,31 @@ class StringServer
   Socket s = ss.accept();
   System.out.println("Connection established with Client.");     
   PrintStream p = new PrintStream(s.getOutputStream());   
-  BufferedReader br = new BufferedReader(new InputStreamReader(s.getInputStream()));
-  BufferedReader kb = new BufferedReader(new InputStreamReader(System.in));
-  while(true)
-  {   
+  BufferedReader br = 
+          new BufferedReader(new InputStreamReader(s.getInputStream()));
+  
    String str,str1;  
-   while((str = br.readLine()) != null)  
+   do
    {   
-       System.out.println("\n Count Of Characters & Digits In String Displayed ");   
-       int countCha = 0,countNum = 0;  
+       str = br.readLine();
+       int charCount = 0,numCount = 0;  
        for(int i=0;i<str.length();i++)
        {
-        if( (str.charAt(i) >= 'a' && str.charAt(i) <= 'z') ||
-        (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z')     || (str.charAt(i) >= ' ') )
-            countCha++;
-        else if(str.charAt(i) >= '0' && str.charAt(i) <= '9')
-            countNum++;
+        if(str.charAt(i) >= '0' && str.charAt(i) <= '9')
+            numCount++;
+        else if( (str.charAt(i) >= 'a' && str.charAt(i) <= 'z') 
+                || (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') 
+                || (str.charAt(i) == ' ') )
+            charCount++;
        }
-       str1 = " Total Number Of Characters = " + countCha;
-                     str1 += " Total Number Of Digits = " + countNum;  
-    p.println(str1); 
-   }       
+       str1 = "Total Number Of Characters = " + charCount;
+       str1 += " | Total Number Of Digits = " + numCount;  
+       p.println(str1); 
+       System.out.println("Count of Characters & Digits in the String sent to Client.");   
+   } while( !str.equals("stop") );
+
    ss.close();
    s.close(); 
-  } 
+
  }
 }

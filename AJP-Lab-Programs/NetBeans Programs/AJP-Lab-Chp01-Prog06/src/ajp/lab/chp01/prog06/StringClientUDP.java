@@ -21,7 +21,8 @@ public static void main(String[] args) throws Exception
 
     InetAddress ip = InetAddress.getByName("localhost");  
 
-    DatagramPacket dp1 = new DatagramPacket(str.getBytes(), str.length(), ip, 3000);  
+    DatagramPacket dp1 = 
+            new DatagramPacket(str.getBytes(), str.length(), ip, 3000);  
     ds.send(dp1); 
 
     ds.close();

@@ -1,11 +1,11 @@
 // Write an application which will retrieve file from server machine	
 // and save that file on client machine.
 // File name will be provided by client.
-package ajp.lab.chp01.prog04;
+
 
 import java.io.*; 
 import java.net.*;
-class FileServer
+public class FileServer
 {
 public static void main(String args[ ]) throws Exception
 {
