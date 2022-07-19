@@ -11,7 +11,6 @@ class StringServer
  public static void main(String args[]) throws Exception
  {
   ServerSocket ss = new ServerSocket(3333);
-  System.out.println("Waiting for Client to send a String.");
   Socket s = ss.accept();
   System.out.println("Connection established with Client.");     
   PrintStream p = new PrintStream(s.getOutputStream());   
@@ -21,6 +20,7 @@ class StringServer
    String str,str1;  
    do
    {   
+      System.out.println("Waiting for Client to send a String.");
        str = br.readLine();
        int charCount = 0,numCount = 0;  
        for(int i=0;i<str.length();i++)
