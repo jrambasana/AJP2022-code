@@ -20,13 +20,13 @@ public static void main(String args[])throws Exception
     String str1="",str2="";  
     while(!str1.equals("stop"))
     {  
-            System.out.println("Waiting for Client's messsage...");  
-            str1 = (String)din.readUTF();  
-            System.out.println("Client: "+str1);  
-            System.out.print("Enter your message here: ");  
-            str2=br.readLine();  
-            dout.writeUTF(str2);  
-            dout.flush();  
+        System.out.println("Waiting for Client's messsage...");  
+        str1 = din.readUTF();  
+        System.out.println("Client: "+str1);  
+        System.out.print("Enter your message here: ");  
+        str2=br.readLine();  
+        dout.writeUTF(str2);  
+        dout.flush();  
     }  
     din.close();  
     s.close();  

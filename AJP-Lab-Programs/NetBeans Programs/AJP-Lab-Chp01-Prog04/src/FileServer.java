@@ -17,10 +17,12 @@ BufferedReader in = new BufferedReader(
     new InputStreamReader( s.getInputStream() ) ); 
 DataOutputStream out = 
         new DataOutputStream(s.getOutputStream());
+// Read the incoming File name from client side
 String fname = in.readLine();
 FileReader fr = null;
 BufferedReader file = null;
 boolean flag;
+// Create a File object
 File f = new File(fname);
 System.out.println("Request arrived for Reading the File:" + fname);
 if(f.exists()) 
@@ -32,6 +34,7 @@ if(flag == true)
     out.writeBytes("Yes"+"\n");
 else 
     out.writeBytes("No"+"\n");
+
 if(flag == true)
 {
     System.out.println("Server started reading the File.");

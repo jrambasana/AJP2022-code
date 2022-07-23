@@ -21,11 +21,19 @@ BufferedReader  in = new BufferedReader(
         new InputStreamReader(s.getInputStream()));
 String str;
 str = in.readLine();
+
+//FileWriter fwriter = new FileWriter(new File("C://A//File2.txt"));
+
 if(str.equals("Yes"))
 {    
     System.out.println("Displaying the File content sent by Server.");
     while((str = in.readLine()) != null)
-            System.out.println(str);
+    {
+        System.out.println(str);
+//        fwriter.append(str);
+//        fwriter.flush();
+    }
+//    fwriter.close();
     kb.close();
     out.close();
     in.close();

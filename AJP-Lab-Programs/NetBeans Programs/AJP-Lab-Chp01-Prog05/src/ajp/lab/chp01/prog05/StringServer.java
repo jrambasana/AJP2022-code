@@ -22,7 +22,8 @@ class StringServer
    {   
       System.out.println("Waiting for Client to send a String.");
        str = br.readLine();
-       int charCount = 0,numCount = 0;  
+       int charCount = 0,numCount = 0;
+       int specialCount = 0;
        for(int i=0;i<str.length();i++)
        {
         if(str.charAt(i) >= '0' && str.charAt(i) <= '9')
@@ -31,9 +32,16 @@ class StringServer
                 || (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') 
                 || (str.charAt(i) == ' ') )
             charCount++;
+            else if (  str.charAt(i) == '!' ||  str.charAt(i) == '@' || str.charAt(i) == '#'
+                    || str.charAt(i) == '%' || str.charAt(i) == '^' || str.charAt(i) == '&'
+                    || str.charAt(i) == '*' || str.charAt(i) ==  '(' || str.charAt(i) == ')'
+                    || str.charAt(i) == '-' || str.charAt(i) == '_' || str.charAt(i) == '+'
+                    || str.charAt(i) == '=' || str.charAt(i) == '~' || str.charAt(i) == '`')
+                specialCount++;
        }
-       str1 = "Total Number Of Characters = " + charCount;
-       str1 += " | Total Number Of Digits = " + numCount;  
+       str1 = "Total Characters = " + charCount;
+       str1 += " | Total Digits = " + numCount; 
+       str1 += " | Total Special Charaters = " + specialCount;
        p.println(str1); 
        System.out.println("Count of Characters & Digits in the String sent to Client.");   
    } while( !str.equals("stop") );
