@@ -10,11 +10,27 @@ public static void main(String[] args) {
     Class.forName("com.mysql.jdbc.Driver");
 
     //2. establish connection by con object
-    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc","root","");
+    Connection con = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/jdbcdb1","root","");
 
     System.out.println("Connection established");
 
-} catch (Exception e) 
-{    System.out.println(e);     }
+    //3. Create the statement object which is 
+    //used to execute query in database
+    Statement stmt = con.createStatement(); 
+    
+    //step4 execute query  
+    ResultSet rs = stmt.executeQuery("select * from emp"); 
+    
+    System.out.println("DATA FETCHED: ");
+
+    
+    //5.close the connection
+    con.close();
+    
+} catch (Exception e) {
+    System.out.println(e);
 }
+}
+    
 }
