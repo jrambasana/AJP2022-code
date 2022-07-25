@@ -11,6 +11,18 @@ public static void main(String[] args) {
 
     System.out.println("Connection established");
 
+    //3. Create the statement object which is 
+    //used to execute query in database
+    Statement stmt = con.createStatement(); 
+    
+    //step4 execute query  
+    ResultSet rs = stmt.executeQuery("select * from emp"); 
+
+    System.out.println("DATA FETCHED: ");
+
+
+    //5.close the connection
+    con.close();
     
 } catch (Exception e) {
     System.out.println(e);
