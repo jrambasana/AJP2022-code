@@ -19,7 +19,9 @@ public static void main(String[] args) {
     ResultSet rs = stmt.executeQuery("select * from emp"); 
 
     System.out.println("DATA FETCHED: ");
-
+    while(rs.next())  
+    System.out.println(rs.getInt(1)+"  "+rs.getString(2)
+            +"  "+rs.getInt(3)+"  "+rs.getString(4));  
 
     //5.close the connection
     con.close();
