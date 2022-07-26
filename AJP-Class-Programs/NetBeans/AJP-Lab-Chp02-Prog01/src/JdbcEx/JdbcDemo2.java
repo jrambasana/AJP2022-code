@@ -6,7 +6,7 @@ import java.sql.*;
  *
  * @author Jatin Ambasana
  */
-public class JdbcDemo {
+public class JdbcDemo2 {
 
   static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
   static final String DB_URL = "jdbc:mysql://localhost/db1";
