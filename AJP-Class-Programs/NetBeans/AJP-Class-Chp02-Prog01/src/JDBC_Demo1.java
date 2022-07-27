@@ -7,7 +7,7 @@ public static void main(String[] args) {
 
     //2. establish connection by con object
     Connection con = DriverManager.getConnection(
-            "jdbc:mysql://localhost:3306/db1","root","");
+            "jdbc:mysql://localhost:3306/mydb1","root","");
 
     System.out.println("Connection established");
 
