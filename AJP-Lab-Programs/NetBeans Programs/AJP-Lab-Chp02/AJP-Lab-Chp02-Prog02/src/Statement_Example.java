@@ -1,12 +1,11 @@
 /*
  * Write a JDBC application which will interact with
  * Database and perform the following task.
- * 1) Create EMP Table with ID, Name, Age and City fields and insert few records.
+ * 1) Create EMP Table with ID, Name, Age and City fields.
  * 2) Using Statement Object display the content of Record.
  * 3) Using Statement Object Insert One Record.
  * 4) Using Statement Object Update One Record.
  * 5) Using Statement Object Delete One Record.
- * 6) Using Statement Object display the content of Record.
  */
 /**
  *
@@ -41,16 +40,16 @@ try
     {
     case 1: {
         // create a table
-        result = st.execute("Create table emp2" 
+        int r = st.executeUpdate("Create table emp2" 
             + "(id int, name varchar(50), age int, city varchar(50) )" ); 
-        if (result){
-            System.out.println("TABLE NOT CREATED SUCCESSFULLY");
-            break;
+        if (r == 0){
+            System.out.println("TABLE CREATED SUCCESSFULLY");
         }
         else {
-            System.out.println("TABLE CREATED SUCCESSFULLY");
+            System.out.println("TABLE NOT CREATED SUCCESSFULLY");
+            break;
         }            
-        int r = st.executeUpdate("Insert into emp2 values(1, 'Jack Pack', 21, 'Mumbai')");
+        r = st.executeUpdate("Insert into emp2 values(1, 'Jack Pack', 21, 'Mumbai')");
         if (r != 0)
              System.out.println("Data Inserted");
         else
@@ -71,34 +70,34 @@ try
         break;
     } 
     case 3: {
-        int r = st.executeUpdate("UPDATE emp2 SET id = 2 WHERE id = 1");
-       if (r != 0)
-           System.out.println("Row Updated!!!");
-       else
+       int r = st.executeUpdate("UPDATE emp2 SET id = 2 WHERE id = 1");
+       if (r == 0)
            System.out.println("Row Not Updated!!!");
+       else
+           System.out.println("Row Updated!!!");
         break;
     } 
     case 4: {
         int r = st.executeUpdate("DELETE FROM emp2 WHERE id = 2"); 
-        if (r != 0)
-            System.out.println("Row Deleted!!!");
-        else 
+        if (r == 0)
             System.out.println("Row Not Deleted!!!");
+        else 
+            System.out.println("Row Deleted!!!");
         break;
     }
     case 5: {
-        result = st.execute("Drop table emp2");
-        if (result)
-            System.out.println("TABLE NOT DROPPED SUCCESSFULLY");
-        else 
+        int r = st.executeUpdate("Drop table emp2");
+        if (r == 0)
             System.out.println("TABLE DROPPED SUCCESSFULLY");
+        else 
+            System.out.println("TABLE NOT DROPPED SUCCESSFULLY");
         break;
     }
     }
     con.commit();
 }
 catch(Exception e){
-    System.out.print(e); 
+    System.out.println(e); 
 } 
 } 
 } 

@@ -12,7 +12,7 @@
 
 /**
  *
- * @author ADMIN
+ * @author Jatin Ambasana
  */
 
 import java.sql.*;  
@@ -22,9 +22,10 @@ public class CallableStatement_Example
     public static void main(String[] args) throws Exception{  
       
     Class.forName("com.mysql.jdbc.Driver");  
-    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb1","root","");  
-      
-    CallableStatement stmt=con.prepareCall("{call getEmpCity(?,?)}");  
+    Connection con = 
+            DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb1","root","");
+    CallableStatement stmt = 
+            con.prepareCall("{call getEmpCity(?,?)}");  
     int empID = 1;
     stmt.setInt(1, empID);
     // Because second parameter is OUT so register it
