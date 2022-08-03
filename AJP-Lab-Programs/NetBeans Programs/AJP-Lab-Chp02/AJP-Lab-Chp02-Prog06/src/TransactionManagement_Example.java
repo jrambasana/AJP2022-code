@@ -18,14 +18,17 @@ public static void main(String args[])throws Exception
     con.setAutoCommit(false);
     viewData(con);
     Statement stmt = con.createStatement();  
-    stmt.executeUpdate("insert into students values(1,'Abhi','Surat','Gujarat')");  
-    stmt.executeUpdate("insert into students values(2,'Mihir','Pune','Maharashtra')");  
+    stmt.addBatch("insert into students values(1,'Abhi','Surat','Gujarat')");  
+    stmt.addBatch("insert into students values(2,'Mihir','Pune','Maharashtra')");  
+    stmt.addBatch("insert into students values(3,'Ajay','Mumbai','Maharashtra')");  
+    stmt.addBatch("insert into students values(4,'Raj','Rajkot','Gujarat')");  
+    stmt.executeBatch();
     System.out.println("Data Inserted");
     viewData(con);
     con.commit();
     System.out.println("Data Committed");
-//    con.rollback();
-//    System.out.println("Data Rolled back");
+    con.rollback();
+    System.out.println("Data Rolled back");
     viewData(con);
     con.close();  
 }
