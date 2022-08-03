@@ -50,6 +50,7 @@ try
             break;
         }            
         r = st.executeUpdate("Insert into emp2 values(1, 'Jack Pack', 21, 'Mumbai')");
+        r = st.executeUpdate("Insert into emp2 values(2, 'Chuk Muck', 22, 'Pune')");
         if (r != 0)
              System.out.println("Data Inserted");
         else

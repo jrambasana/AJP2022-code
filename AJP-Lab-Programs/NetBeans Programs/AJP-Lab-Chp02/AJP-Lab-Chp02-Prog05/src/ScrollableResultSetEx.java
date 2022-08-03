@@ -23,18 +23,17 @@ public static void main(String[] args)
         System.out.println("Connection Established");
         Statement st = con.createStatement();
         ResultSet rs = st.executeQuery("Select * from emp");
-        Scanner s = new Scanner(System.in);
         rs.afterLast();
         while(rs.previous())
         {
-            System.out.println(rs.getInt(1)+"   "+rs.getString(2)+" "+
+            System.out.println(rs.getRow()+": "+rs.getInt(1)+"   "+rs.getString(2)+" "+
                                rs.getInt(3)+" "+rs.getString(4) );
         }
         rs.absolute(3);
-        System.out.println(rs.getInt(1)+"   "+rs.getString(2)+" "+
+        System.out.println(rs.getRow()+": "+rs.getInt(1)+"   "+rs.getString(2)+" "+
                            rs.getInt(3)+" "+rs.getString(4) );    
-        rs.relative(2);
-        System.out.println(rs.getInt(1)+"   "+rs.getString(2)+" "+
+        rs.relative(-2);
+        System.out.println(rs.getRow()+": "+rs.getInt(1)+"   "+rs.getString(2)+" "+
                            rs.getInt(3)+" "+rs.getString(4) );    
         int i=rs.getRow();
         System.out.println("Cursor position: "+i);
