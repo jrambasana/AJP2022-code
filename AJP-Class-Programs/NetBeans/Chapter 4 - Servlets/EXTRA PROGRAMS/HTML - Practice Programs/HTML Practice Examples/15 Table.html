@@ -1,0 +1,83 @@
+<html>
+<body>
+<p>
+Each table starts with a table tag.
+<br/>
+Each table row starts with a tr tag.
+<br/>
+Each table data starts with a td tag.
+
+<h4>One column:</h4>
+<table border="1">
+	<tr>
+    	<td>100</td>
+    </tr>
+</table>
+
+<h4>One rows and three columns:</h4>
+<table border="1">
+	<tr>
+    	<td>100</td>
+        <td>200</td>
+        <td>300</td>
+    </tr>
+</table>
+
+<h4>Two rows and three column:</h4>
+<table border="1">
+    <tr>
+    	<td>100</td>
+        <td>200</td>
+        <td>300</td>
+    </tr>
+    <tr>
+    	<td>400</td>
+        <td>500</td>
+        <td>600</td>
+    </tr>
+</table>
+<br/>
+<table border="1">
+  <tr>
+	<td>Row 1 Cell 1</td>
+	<td>Row 1 Cell 2</td>
+  </tr>
+  <tr>
+	<td>Row 2 Cell 1</td>
+	<td>Row 2 Cell 2</td>
+  </tr>
+</table> 
+
+<br/>
+To make a cell span more than one column, use the colspan attribute:
+<table style="width:100%" border="1">
+  <tr> 
+    <th>Name</th>
+    <th colspan="2">Telephone</th>
+  </tr>
+  <tr>
+    <td>Bill Gates</td>
+    <td>55577854</td>
+    <td>55577855</td>
+  </tr>
+</table>
+ 
+
+<br/>
+To make a cell span more than one row, use the rowspan attribute:
+<table style="width:100%" border="1">
+  <tr>
+    <th>Name</th>
+    <td>Bill Gates</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Telephone</th>
+    <td>55577854</td>
+  </tr>
+  <tr>
+    <td>55577855</td>
+  </tr>
+
+</p>
+</body>
+</html>
