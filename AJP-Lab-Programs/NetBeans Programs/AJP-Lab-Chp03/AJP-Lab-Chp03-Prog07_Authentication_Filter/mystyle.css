@@ -1,0 +1,18 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size:12px;
+}
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size:12px;
+}
+a:link {
+	font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold;color:#3366cc; text-decoration:none;
+}
+a:active {
+	font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#3366cc; text-decoration:none;
+}
+a:visited {
+	font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#3366cc; text-decoration:none;
+}
+.error { 
+	color: #CB3216;	font-size: 10px;
+}
