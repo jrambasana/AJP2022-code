@@ -43,17 +43,16 @@ try{
         pst = con.prepareStatement("Create table Students " 
             + "(id int, name varchar(50), city varchar(50), state varchar(50) )");
         result = pst.execute(); 
-        if (result){
+        if (result)
             System.out.println("TABLE NOT CREATED SUCCESSFULLY");
-            break;
-        }
         else
             System.out.println("TABLE CREATED SUCCESSFULLY");         
+        break;
     }
     case 2: {
         pst = con.prepareStatement("insert into students values(?,?,?,?)");
-        pst.setInt(1,2);
-        pst.setString(2,"AJP");
+        pst.setInt(1,5);
+        pst.setString(2,"Harshdeep");
         pst.setString(3, "Mehsana");
         pst.setString(4, "Gujarat");
         int r = pst.executeUpdate();
@@ -83,7 +82,7 @@ try{
         pst = con.prepareStatement("UPDATE students "
                 + " SET name = ? WHERE id = ?");
         pst.setString(1,"Nancy");
-        pst.setInt(2,1);
+        pst.setInt(2,2);
         pst.executeUpdate();
         System.out.println("Row Updated!!!");
         break;

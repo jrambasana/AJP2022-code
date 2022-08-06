@@ -71,7 +71,7 @@ try
         break;
     } 
     case 3: {
-       int r = st.executeUpdate("UPDATE emp2 SET id = 2 WHERE id = 1");
+       int r = st.executeUpdate("UPDATE emp2 SET id = 3 WHERE id = 1");
        if (r == 0)
            System.out.println("Row Not Updated!!!");
        else

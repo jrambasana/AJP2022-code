@@ -5,10 +5,16 @@
  * 2) Write a java application which will call the above procedure 
  * and display appropriate information on screen. 
  */
-//SQL in the Procedure
+// ++++++++++++++ SQL in the Procedure ++++++++++++++ 
 //SELECT city into EMP_CITY 
-//FROM emp
+//FROM emp2
 //WHERE id = EMP_ID;
+// ++++++++++++++ Stored Procedure++++++++++++++ 
+//CREATE PROCEDURE `getEmpCity`
+//(IN `EMP_ID` INT, OUT `EMP_CITY` VARCHAR(50)) 
+//NOT DETERMINISTIC           CONTAINS SQL            SQL SECURITY 
+//DEFINER 
+//    SELECT city into EMP_CITY FROM emp WHERE id = EMP_ID;
 
 /**
  *
@@ -26,7 +32,7 @@ public class CallableStatement_Example
             DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb1","root","");
     CallableStatement stmt = 
             con.prepareCall("{call getEmpCity(?,?)}");  
-    int empID = 1;
+    int empID = 4;
     stmt.setInt(1, empID);
     // Because second parameter is OUT so register it
     stmt.registerOutParameter(2, java.sql.Types.VARCHAR);
