@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 
-public class Simple extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 public void doGet(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
     response.setContentType("text/html");
@@ -13,7 +13,7 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
     String u=request.getParameter("userName");
     String p=request.getParameter("userPass");
     if(u.equals("admin") && p.equals("admin")){
-        RequestDispatcher rd=request.getRequestDispatcher("welcome");
+        RequestDispatcher rd=request.getRequestDispatcher("home");
         rd.forward(request, response);
     }
     else{
