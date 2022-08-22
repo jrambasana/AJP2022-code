@@ -1,2 +1,2 @@
-# AJP-2022-23 workspace
- Refer to this daily for regular updates on the programs, slides and other learning material for the Advanced Java Programming subject.
+# AJP-2022-23 Code
+Refer to this repository regularly for regular updates on the programs of the Advanced Java Programming subject. 
