@@ -16,11 +16,12 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
         PrintWriter out = response.getWriter();
 
         String n=request.getParameter("userName");
-        out.println("Welcome " + n + " to page 1" );
-        out.println("<br>");
+        out.println("Welcome " + n );
+//        out.println("Welcome " + n + " to page 1" );
+//        out.println("<br>");
 //        out.println("Click <a href='home2'>here</a> to go to Homepage 2.");
-        RequestDispatcher rd=request.getRequestDispatcher("home2");
-        rd.include(request, response);
+//        RequestDispatcher rd=request.getRequestDispatcher("home2");
+//        rd.include(request, response);
 }
 
 }
