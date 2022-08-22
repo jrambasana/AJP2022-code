@@ -1,5 +1,14 @@
-Repository link: https://bit.ly/AJP2022
-Moodle Link: https://learnit.gnomio.com
+A] Repository links:
+
+1) Code Repository Link:
+https://github.com/jrambasana/AJP2022-code
+
+2) Learning Material Repository Link:
+https://github.com/jrambasana/AJP2022-material
+
+
+
+B] Moodle Link: https://learnit.gnomio.com
 
 
 
