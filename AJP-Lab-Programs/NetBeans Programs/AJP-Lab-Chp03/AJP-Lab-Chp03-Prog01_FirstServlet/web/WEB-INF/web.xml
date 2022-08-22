@@ -4,17 +4,9 @@
         <servlet-name>FirstServlet</servlet-name>
         <servlet-class>FirstServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>SecondServlet</servlet-name>
-        <servlet-class>SecondServlet</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>FirstServlet</servlet-name>
         <url-pattern>/s1</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>SecondServlet</servlet-name>
-        <url-pattern>/s2</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>myfirstservlet</welcome-file>
