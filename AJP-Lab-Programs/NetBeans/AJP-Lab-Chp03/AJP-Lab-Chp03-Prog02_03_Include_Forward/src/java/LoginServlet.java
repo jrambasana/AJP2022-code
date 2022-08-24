@@ -12,6 +12,7 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
 
     String u=request.getParameter("userName");
     String p=request.getParameter("userPass");
+    
     if(u.equals("admin") && p.equals("admin")){
         RequestDispatcher rd = request.getRequestDispatcher("home");
         rd.forward(request, response);

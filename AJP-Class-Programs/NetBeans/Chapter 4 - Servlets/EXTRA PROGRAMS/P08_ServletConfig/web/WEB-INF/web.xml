@@ -17,7 +17,7 @@
         </init-param>
         <init-param>
             <param-name>pwd</param-name>
-            <param-value>admin</param-value>
+            <param-value>admin2</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
