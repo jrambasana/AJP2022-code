@@ -4,9 +4,17 @@
         <servlet-name>SessionTrack</servlet-name>
         <servlet-class>SessionTrack</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SessionServlet2</servlet-name>
+        <servlet-class>SessionServlet2</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SessionTrack</servlet-name>
         <url-pattern>/sessiontrack</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SessionServlet2</servlet-name>
+        <url-pattern>/page2</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -11,7 +11,15 @@ String name = request.getParameter("user");
 String pass = request.getParameter("pass");
 if(pass.equals("1234"))
 {
+   // For URL Rewriting
    out.println("<a href='welcome?user_name="+name+"'>Welcome page</a>");
+   
+   // For Hidden Form field
+   out.println("<form action='welcome' method='GET'>");
+   out.println("<input type='hidden' name='user_name' value='"+name+"'>");
+   out.println("<input type='submit' name='submit' value='Welcome'>");
+   out.println("</form>");
+   
    //OR 
    //response.sendRedirect("welcome?user_name="+name+"");
 }
