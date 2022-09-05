@@ -72,7 +72,18 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
             out.println("DB Deleted....!!");
             break;
         }
+        case 8:
+        {
+            ResultSet rs = st.executeQuery("select * from students.student1");
+            while(rs.next())
+            {
+                out.println("<br/> Id: " + rs.getInt(1));
+                out.println("<br/> Name: " + rs.getString(2));
+                out.println("<br/> City: " + rs.getString(3));
+            }
+        }
         } // Switch case ends
+        out.println("<br/><a href='index.html'>Back</a>");
       } catch (Exception e) 
       {
           out.println("Error occured: " + e);
