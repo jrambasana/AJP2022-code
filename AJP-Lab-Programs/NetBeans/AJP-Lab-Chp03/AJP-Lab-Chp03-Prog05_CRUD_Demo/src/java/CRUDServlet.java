@@ -18,7 +18,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 
         //2. establish connection by con object
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","");
-        System.out.println("Connection established");
+        out.println("Connection established <br>");
 
         //3. Create the statement object which is 
         //used to execute query in databas
