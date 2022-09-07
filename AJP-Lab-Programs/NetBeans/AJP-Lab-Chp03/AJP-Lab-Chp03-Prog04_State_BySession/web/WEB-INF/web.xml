@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>SessionTrack</servlet-name>
-        <servlet-class>SessionTrack</servlet-class>
+        <servlet-name>SessionServlet1</servlet-name>
+        <servlet-class>SessionServlet1</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SessionServlet2</servlet-name>
         <servlet-class>SessionServlet2</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>SessionTrack</servlet-name>
-        <url-pattern>/sessiontrack</url-pattern>
+        <servlet-name>SessionServlet1</servlet-name>
+        <url-pattern>/page1</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SessionServlet2</servlet-name>
@@ -18,10 +18,7 @@
     </servlet-mapping>
     <session-config>
         <session-timeout>
-            30
+            1
         </session-timeout>
     </session-config>
-    <welcome-file-list>
-        <welcome-file>sessiontrack</welcome-file>
-    </welcome-file-list>
 </web-app>

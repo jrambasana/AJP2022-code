@@ -7,21 +7,26 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
 public class SessionServlet2 extends HttpServlet {
-public void doGet(HttpServletRequest request,
-                  HttpServletResponse response)
-          throws ServletException, IOException
-{
-    HttpSession session = request.getSession(false);
-    
-    // Set response content type
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
     response.setContentType("text/html");
     PrintWriter out = response.getWriter();
-    
-    out.println("<h3>");    
-    out.println("<br>Welcome "+session.getAttribute("un"));
-    out.println("<br>Your visitor number is: "+session.getAttribute("visitCount"));
-    out.println("</h3>");  
+
+    HttpSession session = request.getSession(false);
+    if(session!=null)
+    {
+//        User u2 = (User)session.getAttribute("user");
+//        out.println("<br/>Welcome back " + u2.username);
+//        out.println("<br/>Session creation Time: " + u2.creationTime);
+//        u2.lastAccessedTime = new Date(session.getLastAccessedTime());
+//        out.println("<br/>Session last accessed Time: " + u2.lastAccessedTime);
+        String username = (String)session.getAttribute("username");
+        out.println("Welcome back " + username);
+    }
+    else
+    {
+        out.println("User not logged in.");
+    }
 }
 }

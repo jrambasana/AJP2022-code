@@ -7,8 +7,10 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 {
 response.setContentType("text/html;charset=UTF-8");
 PrintWriter out = response.getWriter();
+
 String name = request.getParameter("user");
 String pass = request.getParameter("pass");
+
 if(pass.equals("1234"))
 {
    out.println("Welcome "+name);
@@ -18,7 +20,7 @@ if(pass.equals("1234"))
    // For Hidden Form field
    out.println("<form action='welcome' method='GET'>");
    out.println("<input type='hidden' name='user_name' value='"+name+"'>");
-   out.println("<input type='submit' name='submit' value='Welcome'>");
+   out.println("<input type='submit' value='Welcome'>");
    out.println("</form>");
    
    //OR 
