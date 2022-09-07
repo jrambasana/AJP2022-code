@@ -3,19 +3,13 @@
  * Scrollable ResultSetfunctionality.
  */
 
-/**
- *
- * @author Jatin Ambasana
- */
 import java.net.*;
 import java.sql.*; 
 import java.sql.DriverManager;
 import java.util.*;
 
-public class ScrollableResultSetEx 
-{
-public static void main(String[] args) 
-{
+public class ScrollableResultSetEx {
+public static void main(String[] args) {
     try{
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = 
@@ -23,12 +17,21 @@ public static void main(String[] args)
         System.out.println("Connection Established");
         Statement st = con.createStatement();
         ResultSet rs = st.executeQuery("Select * from emp");
-        rs.afterLast();
+        System.out.println("Table in Forward direction: ");
+        while(rs.next())
+        {
+            System.out.println(rs.getRow()+": "+rs.getInt(1)+"   "+rs.getString(2)+" "+
+                               rs.getInt(3)+" "+rs.getString(4) );
+        }        
+        System.out.println("Table in Reverse direction: ");
+//        rs.afterLast();
         while(rs.previous())
         {
             System.out.println(rs.getRow()+": "+rs.getInt(1)+"   "+rs.getString(2)+" "+
                                rs.getInt(3)+" "+rs.getString(4) );
         }
+
+        System.out.println("Table in Random directions: ");        
         rs.absolute(3);
         System.out.println(rs.getRow()+": "+rs.getInt(1)+"   "+rs.getString(2)+" "+
                            rs.getInt(3)+" "+rs.getString(4) );    
