@@ -43,7 +43,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 
         case 3: 
         {
-            st.executeUpdate("INSERT INTO students.student1 values(1,'SS','rajkot')");
+            st.executeUpdate("INSERT INTO students.student1 values(2,'SS','rajkot')");
             out.println("Data inserted...!!");
             break;
         }
