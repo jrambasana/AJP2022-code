@@ -6,13 +6,13 @@
 	 version="3.0">
     
     <filter>
-     	 	<filter-name>MyFilter</filter-name>
-        	<filter-class>MyFilter</filter-class>
+            <filter-name>MyFilter</filter-name>
+            <filter-class>MyFilter</filter-class>
     </filter>
 
-	<filter-mapping>
-        	<filter-name>MyFilter</filter-name>
-        	<servlet-name>WelcomeServlet</servlet-name>
+    <filter-mapping>
+            <filter-name>MyFilter</filter-name>
+            <servlet-name>WelcomeServlet</servlet-name>
     </filter-mapping>
 
 

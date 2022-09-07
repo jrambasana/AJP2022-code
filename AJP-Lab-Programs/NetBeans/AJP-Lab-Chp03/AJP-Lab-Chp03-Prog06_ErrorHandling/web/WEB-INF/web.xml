@@ -20,10 +20,11 @@
         <exception-type>javax.servlet.ServletException</exception-type>
         <location>/eh</location>
     </error-page>
-    <error-page>
+<!--    <error-page>
         <error-code>404</error-code>
         <location>/index.html</location>
     </error-page>
+-->
     <error-page>
         <error-code>500</error-code>
         <location>/index.html</location>

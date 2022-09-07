@@ -8,10 +8,6 @@
         <servlet-name>SecondServlet</servlet-name>
         <servlet-class>SecondServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>ThirdServlet</servlet-name>
-        <servlet-class>ThirdServlet</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>Servlet1</servlet-name>
         <url-pattern>/servlet1</url-pattern>
@@ -19,10 +15,6 @@
     <servlet-mapping>
         <servlet-name>SecondServlet</servlet-name>
         <url-pattern>/servlet2</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ThirdServlet</servlet-name>
-        <url-pattern>/servlet3</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>

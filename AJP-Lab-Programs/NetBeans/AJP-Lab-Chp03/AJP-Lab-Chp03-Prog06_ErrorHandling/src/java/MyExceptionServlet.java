@@ -9,6 +9,6 @@ public class MyExceptionServlet extends HttpServlet {
 protected void doGet(HttpServletRequest request, 
         HttpServletResponse response) throws ServletException, IOException 
 {
-    throw new ServletException("SAMPLE");
+    throw new ServletException("SAMPLE ServletException");
 }
 }
