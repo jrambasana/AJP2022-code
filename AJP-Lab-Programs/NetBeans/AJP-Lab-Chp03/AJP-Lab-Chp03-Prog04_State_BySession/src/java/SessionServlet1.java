@@ -15,18 +15,19 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response)
 
     HttpSession session = request.getSession(true);
 
-//    User u1 = new User();
-//    u1.username = request.getParameter("username");
-//    u1.creationTime = new Date(session.getCreationTime());
-//    u1.lastAccessedTime = new Date(session.getLastAccessedTime());
-//    session.setAttribute("user", u1);
-//    out.println("Welcome "+ u1.username);
-//    out.println("<br/>Session creation Time: " + u1.creationTime);
-//    out.println("<br/>Session last accessed Time: " + u1.lastAccessedTime);    
+    User u1 = new User();
+    u1.username = request.getParameter("username");
+    u1.creationTime = new Date(session.getCreationTime());
+    u1.lastAccessedTime = new Date(session.getLastAccessedTime());
+    session.setAttribute("user", u1);
+    out.println("Welcome "+ u1.username);
+    out.println("<br/>Session creation Time: " + u1.creationTime);
+    out.println("<br/>Session last accessed Time: " + u1.lastAccessedTime);    
 
-    session.setAttribute("username", request.getParameter("username"));
-    out.println("Welcome "+ request.getParameter("username"));
-    out.println("<br/>Username added to Session object.");
+//    session.setAttribute("username", request.getParameter("username"));
+//    out.println("Welcome "+ request.getParameter("username"));
+//    out.println("<br/>Username added to Session object.");
+
     out.println("<a href='page2'>Page 2</a>");
 }
 }

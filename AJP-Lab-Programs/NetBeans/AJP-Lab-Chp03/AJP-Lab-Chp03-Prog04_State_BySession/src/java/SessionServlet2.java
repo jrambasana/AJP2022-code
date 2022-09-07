@@ -16,13 +16,13 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response)
     HttpSession session = request.getSession(false);
     if(session!=null)
     {
-//        User u2 = (User)session.getAttribute("user");
-//        out.println("<br/>Welcome back " + u2.username);
-//        out.println("<br/>Session creation Time: " + u2.creationTime);
-//        u2.lastAccessedTime = new Date(session.getLastAccessedTime());
-//        out.println("<br/>Session last accessed Time: " + u2.lastAccessedTime);
-        String username = (String)session.getAttribute("username");
-        out.println("Welcome back " + username);
+        User u2 = (User)session.getAttribute("user");
+        out.println("<br/>Welcome back " + u2.username);
+        out.println("<br/>Session creation Time: " + u2.creationTime);
+        u2.lastAccessedTime = new Date(session.getLastAccessedTime());
+        out.println("<br/>Session last accessed Time: " + u2.lastAccessedTime);
+//        String username = (String)session.getAttribute("username");
+//        out.println("Welcome back " + username);
     }
     else
     {
