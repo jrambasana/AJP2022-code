@@ -12,7 +12,7 @@ try{
 
     Registry rgsty = LocateRegistry.createRegistry(8999);
     rgsty.rebind("rmi://localhost:8999/sum", stub);
-
+    
 }catch(Exception e){System.out.println(e);}
 }
 

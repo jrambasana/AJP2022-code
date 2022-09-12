@@ -15,7 +15,6 @@ insert into employee (id,name ) values (4,'Ramesh Kumar');
 
 
 */
-
 import java.sql.*;
 
 public class UpdatableResultSetExample1 {
@@ -31,23 +30,21 @@ public class UpdatableResultSetExample1 {
         PreparedStatement stmt = conn.prepareStatement(sql,
                     ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
         ResultSet rs = stmt.executeQuery();
-
-         // Move cursor to 1st row
-         rs.absolute(2);
-         System.out.println("ID : " + rs.getInt("ID") + " \tNAME : " + rs.getString("NAME"));
          
-         // Move cursor to 4th row
-         rs.absolute(4);
-         System.out.println("ID : " + rs.getInt("ID") + " \tNAME : " + rs.getString("NAME"));
-
-         // Move cursor to last row
-         rs.first();
-         System.out.println("ID : " + rs.getInt("ID") + " \tNAME : " + rs.getString("NAME"));
+         // Save the current cursor position, and move cursor to the insert row, 
+         rs.moveToInsertRow();
+         //Set columns values
+         rs.updateInt("ID", 5);
+         rs.updateString("NAME", "Jack Pack");
+         //Insert new row
+         rs.insertRow();
          
-         // Move cursor to last row
-         rs.last();
-         System.out.println("ID : " + rs.getInt("ID") + " \tNAME : " + rs.getString("NAME"));
-        
+         // Move cursor back to saved position
+         rs.moveToCurrentRow();
+        while(rs.next())
+        {
+            System.out.println(rs.getInt(1)+"   "+rs.getString(2));
+        }         
       } catch (Exception e) {
          System.out.println(e);
       }

@@ -25,8 +25,8 @@ public static void main(String args[])throws Exception
     stmt.executeBatch();
     System.out.println("Data Inserted");
     viewData(con);
-    con.commit();
-    System.out.println("Data Committed");
+//    con.commit();
+//    System.out.println("Data Committed");
     con.rollback();
     System.out.println("Data Rolled back");
     viewData(con);

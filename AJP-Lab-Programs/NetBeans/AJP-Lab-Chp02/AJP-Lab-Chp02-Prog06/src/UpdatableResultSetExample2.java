@@ -18,7 +18,7 @@ insert into employee (id,name ) values (4,'Ramesh Kumar');
 import java.sql.*;
 
 public class UpdatableResultSetExample2 {
-   public static void main(String[] args) {
+    public static void main(String[] args) {
       String jdbcUrl = "jdbc:mysql://localhost:3306/mydb1";
       String username = "root";
       String password = "";
@@ -27,24 +27,41 @@ public class UpdatableResultSetExample2 {
       try {
         Class.forName("com.mysql.jdbc.Driver");          
         Connection conn = DriverManager.getConnection(jdbcUrl, username, password);
+        conn.setAutoCommit(false);
+
         PreparedStatement stmt = conn.prepareStatement(sql,
                     ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
         ResultSet rs = stmt.executeQuery();
-         
-         // Save the current cursor position, and move cursor to the insert row, 
+        
          rs.moveToInsertRow();
-         //Set columns values
          rs.updateInt("ID", 5);
          rs.updateString("NAME", "Jack Pack");
-         //Insert new row
          rs.insertRow();
+         rs.moveToCurrentRow();        
+
+         // Move cursor to 2nd row
+         // Delete 2nd row
+         rs.absolute(2);
+         rs.deleteRow();         
          
-         // Move cursor back to saved position
-         rs.moveToCurrentRow();
-        while(rs.next())
-        {
-            System.out.println(rs.getInt(1)+"   "+rs.getString(2));
-        }         
+         conn.commit();
+         
+    // Move cursor to last row
+         // Delete last row
+         rs.last();
+         rs.deleteRow();
+
+
+
+         // Move cursor to before the first row. 
+         rs.beforeFirst();
+
+         while (rs.next()) {
+            System.out.println(
+                  "ID : " + rs.getInt("ID") + " \tNAME : " + rs.getString("NAME"));
+         }
+         conn.rollback();
+//         conn.commit();
       } catch (Exception e) {
          System.out.println(e);
       }

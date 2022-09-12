@@ -1,6 +1,6 @@
 /*
  * Design a JDBC application which will demonstrate
- * Scrollable ResultSetfunctionality.
+ * Scrollable ResultSet functionality.
  */
 
 import java.net.*;
