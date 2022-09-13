@@ -9,7 +9,7 @@ import java.net.*;
 public class Server {  
 public static void main(String[] args){  
 try{  
-    ServerSocket ss=new ServerSocket(6666);  
+    ServerSocket ss=new ServerSocket(9999);  
     Socket s=ss.accept();   
     DataInputStream dis=new DataInputStream(s.getInputStream());  
     String  str=(String)dis.readUTF();  
