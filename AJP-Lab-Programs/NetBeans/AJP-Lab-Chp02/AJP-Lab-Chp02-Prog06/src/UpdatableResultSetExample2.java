@@ -33,11 +33,11 @@ public class UpdatableResultSetExample2 {
                     ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
         ResultSet rs = stmt.executeQuery();
         
-         rs.moveToInsertRow();
-         rs.updateInt("ID", 5);
-         rs.updateString("NAME", "Jack Pack");
-         rs.insertRow();
-         rs.moveToCurrentRow();        
+//         rs.moveToInsertRow();
+//         rs.updateInt("ID", 5);
+//         rs.updateString("NAME", "Jack Pack");
+//         rs.insertRow();
+//         rs.moveToCurrentRow();        
 
          // Move cursor to 2nd row
          // Delete 2nd row
