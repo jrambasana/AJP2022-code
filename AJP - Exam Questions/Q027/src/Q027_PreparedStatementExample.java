@@ -2,6 +2,13 @@
  * Q027:
  * Write a program to insert a record in a table 
  * using Prepared Statement Object. 
+ * SQL - Create Table command:
+ * CREATE TABLE `employees` (
+ * `id` int(11) NOT NULL,
+ * `name` varchar(50) NOT NULL,
+ * `city` varchar(50) NOT NULL,
+ * `salary` int(11) NOT NULL
+ * ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
  */
 import java.io.*;
 import java.sql.*;
