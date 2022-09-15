@@ -25,20 +25,17 @@ public static void main(String args[])throws Exception
     stmt.executeBatch();
     System.out.println("Data Inserted");
     viewData(con);
-//    con.commit();
-//    System.out.println("Data Committed");
-    con.rollback();
-    System.out.println("Data Rolled back");
+    con.commit();
+    System.out.println("Data Committed");
+//    con.rollback();
+//    System.out.println("Data Rolled back");
     viewData(con);
     con.close();  
 }
 public static void viewData(Connection con) throws Exception
 {
     Statement stmt = con.createStatement(); 
-    
-    //step4 execute query  
-    ResultSet rs = stmt.executeQuery("select * from students"); 
-
+    ResultSet rs = stmt.executeQuery("select * from students");
     System.out.println("TABLE DATA: ");
     while(rs.next())  
         System.out.println(rs.getInt(1)+"  "+rs.getString(2)
