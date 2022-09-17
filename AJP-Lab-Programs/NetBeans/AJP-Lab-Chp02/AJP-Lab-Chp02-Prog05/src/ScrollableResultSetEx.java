@@ -4,8 +4,7 @@
  */
 
 import java.net.*;
-import java.sql.*; 
-import java.sql.DriverManager;
+import java.sql.*;
 import java.util.*;
 
 public class ScrollableResultSetEx {
