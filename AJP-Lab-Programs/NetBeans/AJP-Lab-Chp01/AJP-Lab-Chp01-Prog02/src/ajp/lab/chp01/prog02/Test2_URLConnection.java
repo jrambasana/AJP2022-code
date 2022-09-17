@@ -13,8 +13,6 @@ try{
         System.out.println("Got the input stream from the URL connection.");
         int i;
         System.out.println("Response receieved:\n\n");
-//        while( ( i = stream.read() ) != -1 )
-//        {       System.out.print((char)i);        }
         BufferedReader in = new BufferedReader(
                                 new InputStreamReader( urlcon.getInputStream() ) );
         String inputLine;
