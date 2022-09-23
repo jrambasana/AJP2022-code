@@ -7,7 +7,7 @@ Program 5:  Write a Program for testing the include action tag in JSP.
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>JSP Program 5: Include Action Tag</title>
     </head>
     <body>
         <!--center-->
