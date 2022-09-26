@@ -1,10 +1,11 @@
 <%-- 
 Program 3:  Write down a JSP program which will display the error 
 by a common file for all the general pages.
+<%@page isErrorPage="true" %>  
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page isErrorPage="true" %>  
+<%@page isErrorPage="true" %>  
 
 <!DOCTYPE html>
 <html>
