@@ -19,10 +19,10 @@ import java.sql.*;
 
 public class UpdatableResultSetExample2 {
     public static void main(String[] args) {
-      String jdbcUrl = "jdbc:mysql://localhost:3306/mydb1";
+      String jdbcUrl = "jdbc:mysql://localhost:3306/test";
       String username = "root";
       String password = "";
-      String sql = "select id, name from employee";
+      String sql = "select id, name from employee2";
 
       try {
         Class.forName("com.mysql.jdbc.Driver");          
@@ -41,7 +41,7 @@ public class UpdatableResultSetExample2 {
 
          // Move cursor to 2nd row
          // Delete 2nd row
-         rs.absolute(2);
+         rs.absolute(5);
          rs.deleteRow();         
          
          conn.commit();

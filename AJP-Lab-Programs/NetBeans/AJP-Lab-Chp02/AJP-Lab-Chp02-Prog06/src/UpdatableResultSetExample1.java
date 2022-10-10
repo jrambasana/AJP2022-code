@@ -1,17 +1,17 @@
 /*
 
 -- Create a table
-CREATE TABLE employee (
+CREATE TABLE employee2 (
   id int(11) NOT NULL,
   name varchar(30) DEFAULT NULL,
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Insert sample data in a table
-insert into employee (id,name ) values (1,'Sunil Singh');
-insert into employee (id,name ) values (2,'David Miller');
-insert into employee (id,name ) values (3,'Dean Jones');
-insert into employee (id,name ) values (4,'Ramesh Kumar');
+insert into employee2 (id,name ) values (1,'Sunil Singh');
+insert into employee2 (id,name ) values (2,'David Miller');
+insert into employee2 (id,name ) values (3,'Dean Jones');
+insert into employee2 (id,name ) values (4,'Ramesh Kumar');
 
 
 */
@@ -19,10 +19,10 @@ import java.sql.*;
 
 public class UpdatableResultSetExample1 {
    public static void main(String[] args) {
-      String jdbcUrl = "jdbc:mysql://localhost:3306/mydb1";
+      String jdbcUrl = "jdbc:mysql://localhost:3306/test";
       String username = "root";
       String password = "";
-      String sql = "select id, name from employee";
+      String sql = "select id, name from employee2";
 
       try {
         Class.forName("com.mysql.jdbc.Driver");          

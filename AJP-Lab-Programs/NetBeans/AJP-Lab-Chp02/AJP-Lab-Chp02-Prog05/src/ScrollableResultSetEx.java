@@ -12,31 +12,31 @@ public static void main(String[] args) {
     try{
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = 
-            DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb1","root","");
+            DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","");
         System.out.println("Connection Established");
         Statement st = con.createStatement();
-        ResultSet rs = st.executeQuery("Select * from emp");
+        ResultSet rs = st.executeQuery("Select * from employees");
         System.out.println("Table in Forward direction: ");
         while(rs.next())
         {
             System.out.println(rs.getRow()+": "+rs.getInt(1)+"   "+rs.getString(2)+" "+
-                               rs.getInt(3)+" "+rs.getString(4) );
+                               rs.getString(3)+" "+rs.getInt(4) );
         }        
         System.out.println("Table in Reverse direction: ");
 //        rs.afterLast();
         while(rs.previous())
         {
             System.out.println(rs.getRow()+": "+rs.getInt(1)+"   "+rs.getString(2)+" "+
-                               rs.getInt(3)+" "+rs.getString(4) );
+                               rs.getString(3)+" "+rs.getInt(4) );
         }
 
         System.out.println("Table in Random directions: ");        
         rs.absolute(3);
         System.out.println(rs.getRow()+": "+rs.getInt(1)+"   "+rs.getString(2)+" "+
-                           rs.getInt(3)+" "+rs.getString(4) );    
+                           rs.getString(3)+" "+rs.getInt(4) );    
         rs.relative(-2);
         System.out.println(rs.getRow()+": "+rs.getInt(1)+"   "+rs.getString(2)+" "+
-                           rs.getInt(3)+" "+rs.getString(4) );    
+                           rs.getString(3)+" "+rs.getInt(4) );    
         int i=rs.getRow();
         System.out.println("Cursor position: "+i);
         rs.close();

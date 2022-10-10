@@ -17,9 +17,9 @@ by a common file for all the general pages.
     String num1 = request.getParameter("n1");
     String num2 = request.getParameter("n2");
     //Instead of using Integer.parseInt() for int here we use Floats
-    float a = Float.parseFloat(num1);
-    float b = Float.parseFloat(num2);
-    float c = a/b;
+    int a = Integer.parseInt(num1);
+    int b = Integer.parseInt(num2);
+    int c = a/b;
     out.print("Result of Division is: "+c);
 %>
 </body>

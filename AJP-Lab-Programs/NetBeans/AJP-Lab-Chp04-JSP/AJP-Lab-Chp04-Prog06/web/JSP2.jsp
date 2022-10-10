@@ -15,7 +15,7 @@ Program 6:  Write a Program for testing the forward action tag.
         <p>Student details: <br>
             Name:       <%= request.getParameter("name")%>  <br>
             Enrollment: <%= request.getParameter("no")%>    <br>
-            Branch:     <%= request.getParameter("no")%>    <br>
+            Branch:     <%= request.getParameter("branch")%>    <br>
             E-mail:     <%= request.getParameter("mail")%>  <br>
         </p>
     </body>

@@ -16,10 +16,10 @@ Program 4: Perform Database access through JSP.
     <%
         Class.forName("com.mysql.jdbc.Driver");
         Connection con =
-DriverManager.getConnection("jdbc:mysql://localhost:3306/mu","root","");
+DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","");
         Statement st = con.createStatement();
         ResultSet rs = st.executeQuery("select * from student "
-                +"where enroll_no = '" + request.getParameter("no") + "'");
+                +"where no = " + request.getParameter("no"));
         out.println("<table border=\"1\">");
         out.println("<tr>");
             out.println("<th>Enrollment no.</th>");
@@ -37,8 +37,8 @@ DriverManager.getConnection("jdbc:mysql://localhost:3306/mu","root","");
             out.println("<td> "+rs.getInt(3)+" </td>");
             out.println("<td> "+rs.getInt(4)+" </td>");
             out.println("<td> "+rs.getInt(5)+" </td>");
-            out.println("<td> "+rs.getString(6)+" </td>");
-            out.println("<tr>");
+            out.println("<td> "+rs.getDouble(6)+" </td>");
+            out.println("</tr>");
         }
     %>
 </body>

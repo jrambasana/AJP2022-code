@@ -15,7 +15,7 @@ by a common file for all the general pages.
     </head>
     <body>
         <h1>JSP Program 3: ERROR CALCULATION</h1>
-        <h3>Sorry an exception has occurred.</h3>  
+        <h3>Sorry exception has occurred.</h3>  
         <p>Exception is: <b><%= exception %></b> </p>
     </body>
 </html>
