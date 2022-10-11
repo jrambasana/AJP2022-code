@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="2.0">
+
+	<tlib-version>1.1</tlib-version>
+	<short-name>ELFunctionTaglib</short-name>
+	<uri>/ELFunctionTagLibrary</uri>
+
+	<function>
+	<name>abs</name>
+	<function-class>java.lang.Math</function-class>
+	<function-signature>int abs( int )</function-signature>
+	</function>
+
+	<function>
+	<name>round</name>
+	<function-class>java.lang.Math</function-class>
+	<function-signature>int round( double )</function-signature>
+	</function>
+</taglib>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+<servlet>
+    <servlet-name>S1</servlet-name>
+    <jsp-file>config.jsp</jsp-file>
+    <init-param>
+        <param-name>username</param-name>
+        <param-value>ABCD</param-value>
+    </init-param>
+</servlet>
+<servlet-mapping>
+    <servlet-name>S1</servlet-name>
+    <url-pattern>/config.jsp</url-pattern>
+</servlet-mapping>
+</web-app>

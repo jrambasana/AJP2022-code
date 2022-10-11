@@ -2,6 +2,8 @@ A] Repository links:
 
 1) Code Repository Link:
 https://github.com/jrambasana/AJP2022-code
+(http://bit.ly/AJP2022)
+
 
 2) Learning Material Repository Link:
 https://github.com/jrambasana/AJP2022-material

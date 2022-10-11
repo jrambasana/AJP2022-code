@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-body>
+<books>
+<book>
+    <title>Java EE Black Book</title>
+    <description>The Best Book on Advance Java (GTU) </description>
+    <author>Kogent Press</author>
+    <price>500</price>
+</book>
+<book>
+    <title>Database Management System</title>
+    <description>In 3rd Semester</description>
+    <author>Tata MacGrow Hill</author>
+    <price>800</price>
+</book>
+<book>  
+    <title>Three mistakes of my life</title>  
+    <description>Novel</description>
+    <author>Chetan Bhagat</author>  
+    <price>200</price>  
+</book>  
+<book>  
+    <title>Tomorrow land</title>  
+    <description>Science Fiction</description>
+    <author>Nuha</author>  
+    <price>2000</price>  
+</book>
+</books>
+</xml-body>
