@@ -1,19 +1,20 @@
 <%@ page import="com.User" %>  
 <% 
-User userinfo = new User();
-userinfo.setUsername(request.getParameter("username"));
-userinfo.setPassword(request.getParameter("password"));
-userinfo.setAge(Integer.parseInt(request.getParameter("age")));
+User u = new User();
+u.setUsername(request.getParameter("username"));
+u.setPassword(request.getParameter("password"));
+u.setAge(Integer.parseInt(request.getParameter("age")));
 %>
 <br> 
 
 You have entered below details:
 <br> 
-Username: <%= userinfo.getUsername() %> 
+Username: <%= u.getUsername() %> 
 <br> 
-Password: <%= userinfo.getPassword()%> 
+Password: <%= u.getPassword()%> 
 <br> 
-Your Age: <%= userinfo.getAge() %> 
+Your Age: <%= u.getAge() %> 
+
 <%--<jsp:getProperty property="age"      name="userinfo" />--%>
 
 </html>

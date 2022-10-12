@@ -40,6 +40,7 @@ DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","");
             out.println("<td> "+rs.getDouble(6)+" </td>");
             out.println("</tr>");
         }
+        out.println("</table>");
     %>
 </body>
 </html>
