@@ -8,7 +8,7 @@
     response.addCookie(ck);  
     session.setAttribute("user","sonoo");  
 %>  
-
+<a>Expression is:</a> ${1+2}; 
 <form action="process.jsp">  
     Enter Name:<input type="text" name="name" /><br/>
     Enter Age: <input type="text" name="age" /><br/>  

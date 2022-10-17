@@ -14,7 +14,6 @@ String password = ((HttpServletRequest) req).getParameter("password");
 
 if(username.equals("admin") && password.equals("admin")) 
 {
-    String uri = ((HttpServletRequest)req).getRequestURI();
     chain.doFilter(req, res);
 }
 else

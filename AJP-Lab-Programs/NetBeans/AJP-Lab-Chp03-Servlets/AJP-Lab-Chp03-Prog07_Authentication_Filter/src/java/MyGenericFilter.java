@@ -6,7 +6,8 @@ public class MyGenericFilter implements Filter
 {
 private FilterConfig filterconf = null;
 
-public void doFilter(final ServletRequest req, final ServletResponse res, FilterChain chain) throws IOException, ServletException
+public void doFilter(final ServletRequest req, 
+        final ServletResponse res, FilterChain chain) throws IOException, ServletException
 {
         chain.doFilter(req,res);
 }

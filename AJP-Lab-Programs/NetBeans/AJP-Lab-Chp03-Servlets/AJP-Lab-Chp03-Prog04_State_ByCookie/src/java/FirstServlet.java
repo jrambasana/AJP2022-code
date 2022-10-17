@@ -12,7 +12,7 @@ PrintWriter out = response.getWriter();
 String n=request.getParameter("userName");
 out.print("Welcome "+n);
 
-Cookie ck = new Cookie("uname",n);//creating cookie object
+Cookie ck = new Cookie("upass",n);//creating cookie object
 response.addCookie(ck);//adding cookie in the response
 
 //creating submit button

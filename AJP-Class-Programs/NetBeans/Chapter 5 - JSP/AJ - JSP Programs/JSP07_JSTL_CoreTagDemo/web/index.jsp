@@ -5,7 +5,7 @@
 <html>
 <c:out value="${'<b>An <c:out> example </b>'}"/>
 <br/>
-<c:out value="${'<b>An <c:out> example </b>'}" 
+<c:out value="${'<b>Second <c:out> example </b>'}" 
        escapeXml="false"/>
 <br/>
 <c:set var="className" scope="application" 
