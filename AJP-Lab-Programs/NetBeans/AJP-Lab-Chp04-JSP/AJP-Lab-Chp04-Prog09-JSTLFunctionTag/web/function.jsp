@@ -13,7 +13,7 @@ Program 9: Write down a program which demonstrates the Function tag of JSTL.
 </head>
 <body>
     <h1>JSP Program 9: JSTL Function Tag Example</h1>
-    <c:set var="str" scope="page" value="Welcometo the JSTL Function Tag Example"/>  
+    <c:set var="str" scope="page" value="Welcome to the JSTL Function Tag Example"/>  
     ${fn:toLowerCase("HELLO, ")}    <br/>
     ${fn:toUpperCase(str)}       <br/>
     ${fn:substring(str, 0, 1)} <br/>    
