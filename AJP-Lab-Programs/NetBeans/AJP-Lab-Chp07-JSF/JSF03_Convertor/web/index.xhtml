@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core" >
+<h:head>
+  <title>Convert Number Example</title>
+</h:head>
+<h:body>
+  <h1>Convert Number Example</h1>
+  <h:outputText value="100.12585">
+      <f:convertNumber maxFractionDigits="2" />
+  </h:outputText><br> </br>
+
+  <h:outputText value="100.12685">
+      <f:convertNumber minIntegerDigits="4"
+                       minFractionDigits="3" />
+  </h:outputText><br> </br>
+
+  <h:outputText value="100.12685">
+          <f:convertNumber pattern="#00.00" />
+  </h:outputText><br> </br>
+
+  <h:outputText value="$99.6585">
+      <f:convertNumber currencySymbol="$" type="currency"/>
+  </h:outputText><br> </br>	
+
+  <h:outputText value="98.5234%">
+          <f:convertNumber type="percent"/>
+  </h:outputText><br> </br>	
+
+</h:body>
+</html>
+

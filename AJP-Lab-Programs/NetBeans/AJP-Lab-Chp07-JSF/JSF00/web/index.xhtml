@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+  <title>JSF Standard Example</title>
+</h:head>
+<h:body>
+<h:form>
+    <table>
+        <tr>  
+        <td>Student ID</td>  
+        <td><h:inputText id="sid-id" value="#{student.id}"/></td>  
+        </tr>  
+        <tr>  
+        <td>Student Name</td>  
+        <td><h:inputText id="sname-id" value="#{student.name}"/></td>  
+        </tr>  
+        <tr>
+        <td>SUBMIT BUTTON:</td>
+        <td><h:commandButton value="Submit" action="response.xhtml"></h:commandButton></td>
+        </tr>
+    </table>  
+</h:form> 
+</h:body>
+</html>
+
+

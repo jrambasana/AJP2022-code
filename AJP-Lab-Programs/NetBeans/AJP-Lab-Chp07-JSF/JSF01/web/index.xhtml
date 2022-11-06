@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head><title>User Registration Form</title> </h:head> 
+<h:body> 
+<h:form id="form"> 
+<table> 
+<tr> 
+    <td><h:outputLabel for="username">User Name</h:outputLabel></td> 
+    <td><h:inputText id="name-id" value="#{user.name}"/></td> 
+</tr> 
+<tr> 
+    <td><h:outputLabel for="email">Your Email</h:outputLabel></td> 
+    <td><h:inputText id="email-id" value="#{user.email}"/></td> 
+</tr> 
+<tr> 
+    <td><h:outputLabel for="password">Password</h:outputLabel></td> 
+    <td><h:inputSecret id="password-id" value="#{user.password}"/></td> 
+</tr> 
+<tr> 
+    <td><h:outputLabel for="gender">Gender</h:outputLabel></td> 
+    <td>
+        <h:selectOneRadio value="#{user.gender}"> 
+            <f:selectItem itemValue="Male" itemLabel="Male" /> 
+            <f:selectItem itemValue="Female" itemLabel="Female" /> 
+        </h:selectOneRadio>
+    </td> 
+</tr> 
+<tr>
+    <td><h:outputLabel for="address">Address</h:outputLabel></td> 
+    <td><h:inputTextarea value="#{user.address}" cols="50" rows="5"/></td>
+</tr> 
+<tr>
+<td></td>
+<td>    
+    <h:commandButton value="Submit" action="response.xhtml"></h:commandButton> 
+</td>
+</tr>
+</table> 
+</h:form>
+</h:body>
+</html>
+

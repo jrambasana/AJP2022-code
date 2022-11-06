@@ -1,6 +1,6 @@
 <%@page import="com.javatpoint.User"%>
 
-<p>You are successfully logged in!</p>
+<p>You are successfully registered!</p>
 <%
 User bean=(User)request.getAttribute("user");
 %>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+  <title>JSF Registration EXAMPLE</title>
+</h:head>
+<h:body>
+  <h1>JSF Registration EXAMPLE</h1>
+  <h:form>
+      USER NAME: <h:inputText id="uname" value = "#{user.uname}"/>
+      <br/>
+      PASSWORD: <h:inputSecret id="password" value = "#{user.password}"/>
+      <br/>
+      EMAIL: <h:inputText id="email" value = "#{user.email}"/>
+      <br/>
+      COUNTRY <h:inputText id="country" value = "#{user.country}"/>
+      <br/>
+      <h:commandButton action = "#{user.submit()}" value = "SUBMIT"/>
+  </h:form>
+</h:body>
+</html>

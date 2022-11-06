@@ -18,12 +18,12 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
         String name=request.getParameter("name");
         String password=request.getParameter("password");
 
-        LoginBean bean=new LoginBean();
+        User bean=new User();
         bean.setName(name);
         bean.setPassword(password);
-        request.setAttribute("bean",bean);
+        request.setAttribute("user",bean);
 
-        boolean status=bean.validate();
+        boolean status = bean.validate();
 
         if(status){
                 RequestDispatcher rd=request.getRequestDispatcher("login-success.jsp");
