@@ -36,6 +36,8 @@ public class ManageEmployee {
 
       /* List down all the employees */
       ME.listEmployees();
+      
+      System.exit(0);
    }
    
    /* Method to CREATE an employee in the database */
