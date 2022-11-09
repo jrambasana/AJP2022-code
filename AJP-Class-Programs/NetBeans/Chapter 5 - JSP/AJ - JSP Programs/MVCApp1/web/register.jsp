@@ -8,5 +8,7 @@
     City:       <input type="text" name="city"/> <br>
                 <input type="submit" value="login">
 </form>
+    Click <a href="index.jsp">here</a> to login.
+
 </body>
 </html>

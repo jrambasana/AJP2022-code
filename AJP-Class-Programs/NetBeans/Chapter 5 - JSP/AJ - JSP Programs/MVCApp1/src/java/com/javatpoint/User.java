@@ -34,35 +34,41 @@ try{
 Class.forName("com.mysql.jdbc.Driver");  
 Connection con=DriverManager.getConnection(  
 "jdbc:mysql://localhost:3306/test","root","");  
-Statement stmt=con.createStatement();  
-ResultSet rs = stmt.executeQuery(
-"select * from users where name='"
-+name + "' and password = '" + password +"'");  
+PreparedStatement stmt = 
+con.prepareStatement("select * from users where name=? and password=?");  
+stmt.setString(1, name);
+stmt.setString(2, password);
+ResultSet rs = stmt.executeQuery();  
 if(rs.next())  
 {
     this.city = rs.getString("city");
     return true;
 }
 con.close();  
-}catch(Exception e){ System.out.println(e);}      
+}catch(Exception e)
+{ System.out.println(e);}      
 return false;
 }
 
 public boolean register(){
-    try{  
-    Class.forName("com.mysql.jdbc.Driver");  
-    Connection con=DriverManager.getConnection(  
-    "jdbc:mysql://localhost:3306/test","root","");  
-    Statement stmt=con.createStatement();  
-    int res = stmt.executeUpdate("insert into users (name, password, city) values('"
-                                +name + "','" + password + "','" + city + "')" );  
-    if(res==1)  
-    {
-        return true;
-    }
-    con.close();  
-    }catch(Exception e){ System.out.println(e);}      
-    return false;
+try{  
+Class.forName("com.mysql.jdbc.Driver");  
+Connection con=DriverManager.getConnection(  
+"jdbc:mysql://localhost:3306/test","root","");  
+PreparedStatement stmt = 
+con.prepareStatement("insert into users (name, password, city) values(?,?,?)" );  
+stmt.setString(1, name);
+stmt.setString(2, password);
+stmt.setString(3, city);
+int res = stmt.executeUpdate(); 
+
+if(res==1)  
+{
+    return true;
+}
+con.close();  
+}catch(Exception e){ System.out.println(e);}      
+return false;
 }
 
 }

@@ -45,25 +45,27 @@ public class User {
         this.country = country;
     }
     
-    public boolean save(){
-    int result = 0;  
-     try{  
-         Class.forName("com.mysql.jdbc.Driver");     
-         Connection con = DriverManager.getConnection( "jdbc:mysql://localhost:3306/test","root","");  
-         PreparedStatement stmt = con.prepareStatement("insert into user(name, password, email, country) values(?,?,?,?)");  
-         stmt.setString(1, this.getUname());  
-         stmt.setString(2, this.getPassword());  
-         stmt.setString(3, this.getEmail());  
-         stmt.setString(4, this.getCountry());  
-         result = stmt.executeUpdate();  
-     }catch(Exception e){  
-         System.out.println(e);  
-     }  
-     if(result == 1){  
-         return true;  
-     }else 
-         return false;  
-     }
+public boolean save(){
+int result = 0;  
+ try{  
+     Class.forName("com.mysql.jdbc.Driver");     
+     Connection con = 
+             DriverManager.getConnection( "jdbc:mysql://localhost:3306/test","root","");  
+     PreparedStatement stmt = 
+        con.prepareStatement("insert into user(name, password, email, country) values(?,?,?,?)");  
+     stmt.setString(1, uname);  
+     stmt.setString(2, password);  
+     stmt.setString(3, email);  
+     stmt.setString(4, country);  
+     result = stmt.executeUpdate();  
+ }catch(Exception e){  
+     System.out.println(e);  
+ }  
+ if(result == 1){  
+     return true;  
+ }else 
+     return false;  
+ }
     
     public String submit(){  
         if(this.save()){

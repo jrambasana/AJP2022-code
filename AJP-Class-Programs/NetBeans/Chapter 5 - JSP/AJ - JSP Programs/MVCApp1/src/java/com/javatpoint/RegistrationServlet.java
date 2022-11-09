@@ -22,6 +22,8 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
     u1.setCity(city);
     
     boolean status = u1.register();
+    request.setAttribute("user",u1);
+        
     if(status){
             RequestDispatcher rd=request.getRequestDispatcher("register-success.jsp");
             rd.forward(request, response);
