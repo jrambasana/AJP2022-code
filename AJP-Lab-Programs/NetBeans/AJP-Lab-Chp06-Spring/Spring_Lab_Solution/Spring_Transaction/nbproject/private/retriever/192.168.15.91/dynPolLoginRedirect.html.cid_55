@@ -1,0 +1,53 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Expires" content="-1"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta name="id" content="polLoginRedirect" >
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Policy Login Redirect</title>
+	<script type="text/JavaScript" src="jquery_1_8_3-6.2.5-1589068415(eng).js"></script>
+	<script type="text/javascript">
+	<!--
+	var strPolicyRequir = "The policy set up by your network administrator requires that ";
+	var strAuthYourself = "you authenticate yourself with this firewall before you can have access.";
+	var strAuthYourselfInDomain = "only authenticated users are allowed access through this firewall. You do not appear to be logged into the domain, and so must authenticate yourself before you can have access.";
+	var strAuthIntro = "To authenticate yourself click on the following link and enter your user name and password to log in to the firewall.";
+	var strClickLogin = "Click here to log in";
+	// -->
+	</script>
+	<script type="text/JavaScript" src="polLoginRedirect.js"></script>
+	<link rel=stylesheet href="swl_login-6.2.5-2193764341(eng).css" TYPE="text/css">
+</head>
+<body style="background-color:#044949">
+	<div class="login_outer">
+		<div class="login_inner">
+			<div class="vgap48"></div>
+			<font face="Times New roman" color="#34495e"><h1 align="center">Marwadi University</h1></font>
+			<div class="login_prodname">
+				SuperMassive
+			</div>
+			<div class="vgap48"></div>
+
+			<div class="contentWithIconBox">
+				<div class="containter_left">
+					<div class="icon_warning"></div>
+				</div>
+				<div class="container_right">
+					<div class="login_msg_header">
+						Authentication Required
+					</div>
+					<div id="popup_box_text" class="login_msg_content">
+						<a href="https://192.168.15.91/auth.html?cid=55"></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>
