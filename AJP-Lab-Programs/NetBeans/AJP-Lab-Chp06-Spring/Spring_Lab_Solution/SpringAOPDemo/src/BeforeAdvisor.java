@@ -1,23 +1,17 @@
-
 import java.lang.reflect.Method;
+import org.springframework.aop.AfterAdvice;
 import org.springframework.aop.MethodBeforeAdvice;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author admin
- */
-   
     public class BeforeAdvisor implements MethodBeforeAdvice{
     
-    @Override
     public void before(Method method, Object[] args, Object target)throws Throwable {  
-        System.out.println("additional concern before actual logic");  
+        System.out.println("This is some additional concern BEFORE actual logic");  
     }  
+
+//    public void afterReturning(Object o, Method method, Object[] os, Object o1)throws Throwable {  
+//        System.out.println("additional concern AFTER actual logic");  
+//    }  
+    
     
 }
     

@@ -20,6 +20,7 @@ public class Test {
     ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");  
     A a=(A)context.getBean("proxy",A.class);
     a.m();  
+//    System.out.println(a.a());
 }  
     
 }
